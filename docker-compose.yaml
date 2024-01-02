@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node-react:
+    image: node:alpine3.18
+    ports:
+      - 3200:3000
+    volumes:
+      - ./workspace:/home/workspace
+    stdin_open: true
+    tty: true
+    container_name: react_typescript
+    environment:
+      - WDS_SOCKET_PORT=0
